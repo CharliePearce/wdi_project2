@@ -1,0 +1,18 @@
+== README
+
+Street Art Snaps is a mobile-first app for sharing pictures of cool street art in various locations around the world.
+
+Users are able to create an account and edit it, as well as delete their account if they no longer wish to remain a user.
+
+Login/logout functions are included, as well as session management so that a user may stay logged in if they wish.
+
+Users will are able to upload photos and give them a title and caption.
+
+Users are not able to edit or delete another user's photos.
+
+Users are able to select a location from a pre-defined list for their photos.
+
+Users are able to find photos by choosing from the list of available locations.
+--------------------------------------------------------------------------------
+
+This app uses Devise for session management and is built on Rails.
