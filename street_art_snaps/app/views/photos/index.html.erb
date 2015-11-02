@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Photos</h1>
+<h1>Street Art Around The World</h1>
 
 <table>
   <thead>
@@ -16,6 +16,7 @@
       <tr>
         <td><%= photo.title %></td>
         <td><%= photo.description %></td>
+        <td><%= Location.find(photo.location_id).name %></td>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
         <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>

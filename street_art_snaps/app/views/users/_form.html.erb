@@ -28,8 +28,8 @@
     <%= f.text_field :last_name %>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+    <%= f.label :location_id %><br />
+    <%= f.collection_select(:location_id, Location.all, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :user_image %><br>
