@@ -1,2 +1,0 @@
-class CookiesController < ApplicationController
-end
