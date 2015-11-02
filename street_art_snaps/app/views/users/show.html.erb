@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>User image:</strong>
+  <%= @user.user_image %>
+</p>
+
+<p>
   <strong>First name:</strong>
   <%= @user.first_name %>
 </p>
@@ -21,8 +26,10 @@
 </p>
 
 <p>
-  <strong>User image:</strong>
-  <%= @user.user_image %>
+  <strong>Photos:</strong>
+  <% @user.photos.each do |photo| %>
+  <%= image_tag photo.description %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
