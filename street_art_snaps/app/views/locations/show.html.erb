@@ -2,7 +2,10 @@
 
 <p>
   <b>Image:</b>
-  <%= image_tag @location.image.url %>
+  <% @location.photos.each do |photo| %>
+    <%= image_tag photo.image %>
+  <% end %>
+  <%#= image_tag @location.image.url %>
 </p>
 
 <%= @location.name %>
