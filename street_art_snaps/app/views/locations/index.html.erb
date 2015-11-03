@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Locations of Street Art Snaps</h1>
+<h1>Pics from all around the world</h1>
 
 <table>
   <thead>
@@ -12,15 +12,10 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
-        <td><%= link_to location.name %></td>
-        <!-- <td><%= link_to 'Edit', edit_location_path(location) %></td>
-        <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        <td><%= link_to location.name, location %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-<!-- 
-<%= link_to 'New Location', new_location_path %>
- -->

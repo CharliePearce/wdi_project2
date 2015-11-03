@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= @location.name %>
+<% @location.photos.each do |photo| %>
+  <%= photo.title %>
+<% end %>
 <%= link_to 'Back', locations_path %>
