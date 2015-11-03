@@ -13,6 +13,7 @@
     <% @locations.each do |location| %>
       <tr>
         <td><%= link_to location.name, location %></td>
+        <td><%= image_tag location.image.url %></td>
       </tr>
     <% end %>
   </tbody>
