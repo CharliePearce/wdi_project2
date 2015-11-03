@@ -7,4 +7,18 @@ Rails.application.routes.draw do
   resources :locations
   resources :photos
 
+  resources :photos do
+    member do
+      put "like", to: "photos#upvote"
+      put "dislike", to: "photos#downvote"
+      put "unvote", to: "photos#unvote"
+    end
+  end
+
 end
+
+
+
+
+
+

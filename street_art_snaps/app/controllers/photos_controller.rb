@@ -2,6 +2,24 @@ class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+  def upvote
+    @photo = Photo.find(params[:id])
+    @photo.upvote_by current_user
+    redirect_to :back
+  end
+
+  def downvote
+    @photo = Photo.find(params[:id])
+    @photo.downvote_by current_user
+    redirect_to :back
+  end
+
+  def unvote
+    @photo = Photo.find(params[:id])
+    @photo.unvote_by current_user
+    redirect_to :back
+  end
+
   # GET /photos
   # GET /photos.json
   def index

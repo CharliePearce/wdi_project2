@@ -20,6 +20,26 @@
   <%= image_tag(@photo.image.url) if @photo.image %>
 </p>
 
+<p>
+  <%= link_to "Upvote", like_photo_path(@photo[:id]), method: :put %>
+</p>
+
+<p>
+  <%= @photo.get_likes.size %>
+</p>
+
+<p>
+  <%= link_to "Downvote", dislike_photo_path(@photo[:id]), method: :put %>
+</p>
+
+<p>
+  <%= @photo.get_dislikes.size %>
+</p>
+
+<p>
+  <%= link_to "Cancel Vote", unvote_photo_path(@photo[:id]), method: :put %>
+</p>
+
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
 

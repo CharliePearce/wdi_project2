@@ -23,7 +23,7 @@
         <td><%= photo.title %></td>
         <td><%= photo.description %></td>
         <td><%= Location.find(photo.location_id).name %></td>
-        <td><%= image_tag photo.image.url %></td>
+        <td><%= image_tag photo.image.thumb.url %></td>
         <td><%= link_to 'View', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
         <td><%= link_to 'Delete', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
