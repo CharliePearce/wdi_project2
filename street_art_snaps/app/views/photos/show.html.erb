@@ -12,7 +12,7 @@
 
 <p>
   <strong>Location:</strong>
-  <%= Location.find(@photo.location_id).name %>
+  <%= @photo.location.name %>
 </p>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |

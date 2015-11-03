@@ -13,19 +13,17 @@
   </head>
 
   <body>
-  <ul class="side-nav">
     <div class='login'>
       <% if current_user %>
-      Hello <%= current_user.email %>!
-      <li><%= link_to 'Edit', edit_user_registration_path, method: :get %></li>
-      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      Hello <%= link_to current_user.email, edit_user_registration_path, method: :get %> |
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %> |
       <% else %>
-      <li><%= link_to "Sign In", new_user_session_path %></li>
-      <li><%= link_to "Register", new_user_registration_path %></li>
+      <%= link_to "Sign In", new_user_session_path %>
+      <%= link_to "Register", new_user_registration_path %>
       <% end %>
-      <li><%= link_to 'Photos', photos_path %>
+      <%= link_to 'Photos', photos_path %>
     </div>
-    </ul>
+    
 
   <body>
 
