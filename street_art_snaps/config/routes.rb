@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "photos#index"
+  root 'static_pages#home'
 
   devise_for :users
   resources :users
