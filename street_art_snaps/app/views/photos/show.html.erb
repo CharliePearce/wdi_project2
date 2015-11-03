@@ -1,3 +1,4 @@
+<%= link_to 'Back', photos_path %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -16,9 +17,11 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
+  <strong>Image:</strong><br>
+  <%= link_to 'Edit Image', edit_photo_path(@photo) %><br> 
   <%= image_tag(@photo.image.url) if @photo.image %>
 </p>
+
 
 <ul>
   <li>
@@ -34,6 +37,6 @@
   </li>
 </ul> 
 
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+
+
 
