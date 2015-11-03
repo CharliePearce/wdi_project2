@@ -22,15 +22,15 @@
 
 <ul>
   <li>
-    <%= link_to "Upvote", like_photo_path(@photo[:id]), method: :put %>
+  <%= link_to "Like", like_photo_path(@photo[:id]), method: :put %>
     <%= @photo.get_likes.size %>
   </li>
   <li>
-    <%= link_to "Downvote", dislike_photo_path(@photo[:id]), method: :put %>
+    <%= link_to "Dislike", dislike_photo_path(@photo[:id]), method: :put %>
     <%= @photo.get_dislikes.size %>
   </li> 
   <li>
-    <%= link_to "Cancel Vote", unvote_photo_path(@photo[:id]), method: :put %>
+    <%= link_to "Cancel", unvote_photo_path(@photo[:id]), method: :put %>
   </li>
 </ul> 
 

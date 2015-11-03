@@ -14,7 +14,7 @@
       <tr>
         <td><%= link_to location.name, location %></td>
         <% if location.photos.length > 0 %>
-          <td><%= image_tag location.photos.first.image %></td>
+          <td><%= image_tag location.photos.first.image.thumb %></td>
         <% end %>
       </tr>
     <% end %>
