@@ -20,7 +20,6 @@
         <td><%= image_tag user.user_image.thumb.url %></td> 
         <td><%= user.full_name %></td>
         <td><%= user.location.name if user.location %></td>
-        <td><%= user.about_me %></td>
         <td><%= link_to 'View profile', user %></td>
       </tr>
     <% end %>

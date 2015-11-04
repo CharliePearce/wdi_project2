@@ -3,10 +3,8 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @photo.title %>
-</p>
+  <%= @photo.title %> 
 
-<p>
   <strong>Description:</strong>
   <%= @photo.description %>
 </p>
@@ -17,20 +15,21 @@
 </p>
 
 <p>
-  <strong>Image:</strong><br>
-  <%= link_to 'Edit Image', edit_photo_path(@photo) %><br> 
-  <%= image_tag(@photo.image.url) if @photo.image %>
+  <%= image_tag(@photo.image.url) if @photo.image %><br>
+  <% if current_user == @photo.user %> 
+  <%= link_to 'Edit Image', edit_photo_path(@photo) %>
+  <% end %>
 </p>
 
 
-<ul>
-  <li>
+<ul class="votables">
+  <li class="votables">
   <%= link_to "Like", like_photo_path(@photo[:id]), method: :put %>
-    <%= @photo.get_likes.size %>
+    <%= @photo.get_likes.size %> |
   </li>
   <li>
     <%= link_to "Dislike", dislike_photo_path(@photo[:id]), method: :put %>
-    <%= @photo.get_dislikes.size %>
+    <%= @photo.get_dislikes.size %> |
   </li> 
   <li>
     <%= link_to "Cancel", unvote_photo_path(@photo[:id]), method: :put %>
