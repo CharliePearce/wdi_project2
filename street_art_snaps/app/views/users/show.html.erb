@@ -3,22 +3,23 @@
 
 <p>
   <strong>Username:</strong>
-  <%= @user.username %>
+  <%= @user.username %>   
+
+  <strong>Avatar:</strong>
+  <%= @user.user_image %>
 </p>
 
 <p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+  <strong>Name:</strong>
+  <%= @user.full_name %>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<p>
   <strong>Location:</strong>
   <%= @user.location.name %>
+</p>
+
+<p>
+  <strong>About Me:</strong>
+  <%= @user.about_me %>
 </p>
 
 <p>

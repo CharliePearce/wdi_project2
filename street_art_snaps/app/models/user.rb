@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :photos, dependent: :destroy
   belongs_to :location
+
+  def full_name
+    [first_name, last_name].join(" ")
+  end
 end

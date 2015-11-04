@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Pics from all around the world.</h1>
+<h4><%= link_to 'Add a new photo', new_photo_path %></h4>
+<h1>The locations of Street Art Snaps.</h1>
 
 <table>
   <thead>
@@ -8,7 +8,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-  <%#= link_to 'Add a new photo', new_photo_path(photo) %>
+
   <tbody>
     <% @locations.each do |location| %>
       <tr>
