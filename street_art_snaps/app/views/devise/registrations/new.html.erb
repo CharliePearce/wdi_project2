@@ -22,6 +22,12 @@
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
   </div>
+
+  <div class="field">
+    <%= f.label :about_me %><br />
+    <%= f.text_field :about_me %>
+  </div>
+
   <div class="field">
     <%= f.label :location_id %><br />
     <%= f.collection_select(:location_id, Location.all, :id, :name) %>
