@@ -14,7 +14,7 @@
 
   <body>
      <div class='login'>
-      <% if current_user %>
+      <% if user_signed_in? %>
       Welcome back, <%= link_to (current_user.full_name or current_user.email), edit_user_registration_path, method: :get %> |
       <%= link_to "Log out?", destroy_user_session_path, method: :delete %><br>
       <%= link_to 'Home', root_path %> |
