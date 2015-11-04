@@ -7,13 +7,13 @@
     <title><%= content_for?(:title) ? yield(:title) : "Street Art Snaps" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "vendor/modernizr.custom" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <div class='login'>
+     <div class='login'>
       <% if current_user %>
       Welcome back, <%= link_to (current_user.full_name or current_user.email), edit_user_registration_path, method: :get %> |
       <%= link_to "Log out?", destroy_user_session_path, method: :delete %><br>
@@ -22,13 +22,10 @@
       <%= link_to "Sign In", new_user_session_path %> |
       <%= link_to "Create a new account", new_user_registration_path %> |<br>
       <% end %>
-      <%= link_to 'Photos', photos_path %> |
-      <%= link_to 'Locations', locations_path %> |
+      <%= link_to 'Pictures', photos_path %> |
+      <%= link_to 'Places', locations_path %> |
       <%= link_to 'People', users_path %>
     </div>
-    
-
-  <body>
 
     <%= yield %>
 

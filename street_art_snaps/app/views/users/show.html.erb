@@ -24,10 +24,16 @@
 
 <p>
   <strong>Photos:</strong>
-  <% @user.photos.each do |photo| %>
-  <%= link_to image_tag(photo.image.thumb.url), photo %>
-  <% end %>
+  <ul class="user_photos_grid">
+   <% @user.photos.each do |photo| %>
+   <li class="user_photo large-3 medium-4 small-6 columns">
+     <ul class="tile">
+      <%= link_to image_tag(photo.image.thumb.url), photo %>
+    </ul>
+  </li>
 </p>
+<% end %>
+</ul>
 
 
 
