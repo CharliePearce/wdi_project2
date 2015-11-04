@@ -6,7 +6,8 @@
   <%= @user.username %>   
 
   <strong>Avatar:</strong>
-  <%= @user.user_image %>
+  <%= image_tag @user.user_image.url %>
+  <%#= @user.user_image %>
 </p>
 
 <p>

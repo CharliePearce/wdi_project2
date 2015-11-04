@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :photos, dependent: :destroy
   belongs_to :location
+  mount_uploader :user_image, UserImageUploader
 
   def full_name
     [first_name, last_name].join(" ")
