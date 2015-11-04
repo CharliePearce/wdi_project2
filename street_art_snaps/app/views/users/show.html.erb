@@ -5,9 +5,6 @@
   <strong>Username:</strong>
   <%= @user.username %>   
 
-  <!-- <strong>Avatar:</strong> -->
-  <%#= image_tag @user.user_image.thumb.url %>
-
   <strong>Avatar:</strong>
   <%= link_to image_tag(@user.user_image.thumb.url), @user.user_image.url %>
 </p>
@@ -28,7 +25,7 @@
 <p>
   <strong>Photos:</strong>
   <% @user.photos.each do |photo| %>
-  <%= image_tag photo.image.thumb.url %>
+  <%= link_to image_tag(photo.image.thumb.url), photo %>
   <% end %>
 </p>
 
