@@ -17,4 +17,10 @@ class ApplicationController < ActionController::Base
         :email, :about_me, :password, :password_confirmation, :current_password, :user_image)
     end
   end
+
+  def after_sign_in_path_for(resource)
+    p "Mike"
+    user_path(current_user)
+  end
+
 end

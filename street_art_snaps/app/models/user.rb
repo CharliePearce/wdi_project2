@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   def full_name
     [first_name, last_name].join(" ")
   end
+
+  def after_update_path_for(resource)
+    signed_in_root_path(resource)
+  end
 end
