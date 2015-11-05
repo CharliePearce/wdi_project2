@@ -14,24 +14,25 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
+a {
+  color: #3BF664;
+}
+
+em {
+  color: #FED543;
+}
 
 #user_photos_grid {
   list-style: none;
 }
 
-#edit_user, #photoform {
+#edit_user, #photoform, #newpassword {
   max-width: 35%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.newuser {
-  max-width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.login {
+.newuser, .login, {
   max-width: 30%;
   margin-left: auto;
   margin-right: auto;
@@ -60,17 +61,6 @@ body {
   font-family: 'Muli', sans-serif; 
   color: white;
 }
-
-
-// input[type='file'] {
-//   margin: 0 auto;
-//   text-align: center;
-// }
-
-// label {
-//   color: #008CA2;
-// }
-
 
 @media only screen and (max-width: 640px) {
   body {

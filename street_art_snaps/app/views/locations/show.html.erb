@@ -3,9 +3,11 @@
 
 
 <b>Location:</b>
-<%= @location.name %> 
+<%= @location.name %>
 <% @location.photos.each do |photo| %><br>
 <% end %>
+ <br>
+<%= link_to 'Add a picture', new_photo_path %>
 <br><br>
 
 <p>

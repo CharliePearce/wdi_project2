@@ -11,12 +11,12 @@
     <title><%= content_for?(:title) ? yield(:title) : "Street Art Snaps" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%#= javascript_include_tag "vendor/modernizr.custom" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+
      <div class='login'>
       <% if user_signed_in? %>
       <label>Welcome back, <%= link_to (current_user.full_name or current_user.email), edit_user_registration_path, method: :get %> |</label>
