@@ -65,8 +65,11 @@ body {
 
 @media only screen and (max-width: 640px) {
   body {
-    background-size: cover;
+    text-align: center;
+    background: image-url('graf3a.jpg') no-repeat center center fixed;
+
   }
+
   input[type="submit"] {
     background: #e2e2e2;
   }
