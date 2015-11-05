@@ -11,24 +11,21 @@
     </div>
   <% end %>
 
-
+  <div id="photoform">
   <div class="field">
-    <%= f.label :image %><br>
     <%= f.file_field :image %>
   </div>
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder => "Title"  %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, :placeholder => "Description"  %>
   </div>
   <div class="field">
-    <%= f.label :location_id %><br>
     <%= f.collection_select(:location_id, Location.all, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div>
   </div>
 <% end %>
