@@ -16,7 +16,7 @@
   <%= @user.full_name %> |
 
   <strong>Location:</strong>
-  <%= @user.location.name %>
+  <%= @user.try(:location).name %>
 </p>
 
 <p>
