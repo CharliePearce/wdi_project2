@@ -1,18 +1,15 @@
 == README
 
-Street Art Snaps is a mobile-first app for sharing pictures of cool street art in various locations around the world.
+Street Art Snaps is a mobile-first app built using Ruby on Rails with session management via the Devise gem, file uploading via CarrierWave and image voting using Acts As Votable.
+---------------------------------------------------------------------
 
-Users are able to create an account and edit it, as well as delete their account if they no longer wish to remain a user.
+Wins:
+CarrierWave is successfully implemented allowing both a user avatar to be uploaded as well as images, and functionality works successfully from a mobile phone.
+Acts As Votable is successfully implemented and will not allow a user to spam-vote photographs, only allowing one vote per photo per current user.
 
-Login/logout functions are included, as well as session management so that a user may stay logged in if they wish.
+Struggles:
+Configuring routes and understanding the conflicting priorities that arose from using Devise when I had already scaffolded my controllers.
 
-Users will are able to upload photos and give them a title and caption.
+What I would like to do different next time:
+I had hoped to implement more Foundation elements but unfortunately there was not sufficient time for this.
 
-Users are not able to edit or delete another user's photos.
-
-Users are able to select a location from a pre-defined list for their photos.
-
-Users are able to find photos by choosing from the list of available locations.
---------------------------------------------------------------------------------
-
-This app uses Devise for session management and is built on Rails.

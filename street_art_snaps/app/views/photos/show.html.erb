@@ -16,17 +16,20 @@
 
 <p>
   <%= image_tag(@photo.image.url) if @photo.image %><br>
-  <% if current_user == @photo.user %> 
-  <%= link_to 'Edit', edit_photo_path(@photo) %> |
-  <%= link_to 'Delete', @photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
+<!--   <li class="user_photo large-3 medium-4 small-6 columns">
+    <ul class="tile">
+    </ul>
+  </li> -->
 </p>
 
-
+<% if current_user == @photo.user %> 
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Delete', @photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
 
 <ul class="votables">
   <li class="votables">
-  <%= link_to "Like", like_photo_path(@photo[:id]), method: :put %>
+    <%= link_to "Like", like_photo_path(@photo[:id]), method: :put %>
     <%= @photo.get_likes.size %> |
 
     <%= link_to "Dislike", dislike_photo_path(@photo[:id]), method: :put %>
