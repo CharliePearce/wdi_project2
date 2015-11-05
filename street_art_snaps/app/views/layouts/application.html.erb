@@ -3,20 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://fonts.googleapis.com/css?family=Monofett' rel='stylesheet' type='text/css'>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>  
 
     <title><%= content_for?(:title) ? yield(:title) : "Street Art Snaps" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%#= javascript_include_tag "vendor/modernizr.custom" %>
-    <%#= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
      <div class='login'>
       <% if user_signed_in? %>
-      Welcome back, <%= link_to (current_user.full_name or current_user.email), edit_user_registration_path, method: :get %> |
-      <%= button_to "Log out?", destroy_user_session_path, method: :delete %><br>
+      <label>Welcome back, <%= link_to (current_user.full_name or current_user.email), edit_user_registration_path, method: :get %> |</label>
+      <%= link_to "Log out?", destroy_user_session_path, method: :delete %><br> |
       <%= link_to 'Home', root_path %> |
       <% else %>
       <%= link_to "Sign In", new_user_session_path %> |

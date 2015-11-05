@@ -2,29 +2,16 @@
 
 <h2>People.</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Username</th>
-      <th>Avatar</th>
-      <th>Name</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <ul>
     <% @users.each do |user| %>
-      <tr>
-        <td><%= user.username %></td> 
-        <td><%= image_tag user.user_image.thumb.url %></td> 
-        <td><%= user.full_name %></td>
-        <td><%= user.location.name if user.location %></td>
-        <td><%= link_to 'View profile', user %></td>
-      </tr>
+        <li><%= link_to user.username, user%></li> 
+        <li><%= image_tag user.user_image.thumb.url %></li> 
+        <li><%= user.full_name %></li>
+        <li><%= user.location.name if user.location %></li>
+      </ul>
     <% end %>
-  </tbody>
-</table>
+
 
 <br>
+
 

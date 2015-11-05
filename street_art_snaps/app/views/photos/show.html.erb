@@ -17,9 +17,11 @@
 <p>
   <%= image_tag(@photo.image.url) if @photo.image %><br>
   <% if current_user == @photo.user %> 
-  <%= link_to 'Edit Image', edit_photo_path(@photo) %>
+  <%= link_to 'Edit', edit_photo_path(@photo) %> |
+  <%= link_to 'Delete', @photo, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 </p>
+
 
 
 <ul class="votables">

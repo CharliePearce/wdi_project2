@@ -5,31 +5,74 @@ h1 {
   color: white;
 }
 
+h2 {
+  font-family: 'Monofett';
+  margin: 0 auto 0 auto;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #user_photos_grid {
   list-style: none;
 }
 
- #sign_up, #edit_user {
-  max-width: 50%;
+#edit_user {
+  max-width: 30%;
   margin-left: auto;
   margin-right: auto;
- }
+}
 
- // body {
- //  background-image: url(http://images3.alphacoders.com/691/69107.jpg);
- //  background-size: 75%;
- // }
+.sign_up {
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
- ul, li {
+.new_session {
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.field {
+  padding: 1px;
+  border: 2px solid #206CEF;
+  margin: 2px;
+  border-radius: 5px;
+  color: #333;
+  transition: all 0.3s ease-out;
+}
+
+ul, li {
   list-style: none;
 }
 
 body {
   text-align: center;
-  background: url(./graffiti.jpg) no-repeat center center fixed; 
+  background: url(./graf3.jpg) no-repeat center center fixed;  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+
+// input[type='file'] {
+//   margin: 0 auto;
+//   text-align: center;
+// }
+
+// label {
+//   color: #008CA2;
+// }
+
+
+@media only screen and (max-width: 640px) {
+  body {
+    background-size: cover;
+  }
 }
 
