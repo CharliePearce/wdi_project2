@@ -25,13 +25,13 @@ h2 {
   margin-right: auto;
 }
 
-.sign_up {
+.newuser {
   max-width: 30%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.new_session {
+.login {
   max-width: 30%;
   margin-left: auto;
   margin-right: auto;
@@ -57,6 +57,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Muli', sans-serif; 
+  color: white;
 }
 
 
