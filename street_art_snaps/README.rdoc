@@ -18,4 +18,4 @@ The media query responsivity is not at a level which I had hoped for, especially
 
 The project is deployed on Heroku and can be accessed at:
 
-http://http://floating-beyond-1818.herokuapp.com/
+http://floating-beyond-1818.herokuapp.com/
