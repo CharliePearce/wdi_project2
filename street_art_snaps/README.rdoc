@@ -14,3 +14,8 @@ What I would like to do different next time:
 I had hoped to implement more Foundation elements but unfortunately there was not sufficient time for this.
 I had also hoped to implement some kind of image gallery to display the images in a more modern fashion than simply using a grid layout.
 The media query responsivity is not at a level which I had hoped for, especially with regards to the background image and the forms.  
+----------------------------------------------------------------------
+
+The project is deployed on Heroku and can be accessed at:
+
+http://http://floating-beyond-1818.herokuapp.com/
