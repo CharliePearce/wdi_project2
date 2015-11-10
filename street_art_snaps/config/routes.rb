@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       put "like", to: "photos#upvote"
       put "dislike", to: "photos#downvote"
       put "unvote", to: "photos#unvote"
+      post "comment", to: "photos#comment"
     end
   end
 

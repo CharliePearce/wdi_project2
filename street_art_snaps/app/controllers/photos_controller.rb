@@ -29,6 +29,12 @@ class PhotosController < ApplicationController
   def show
   end
 
+  def comment
+    photo = Photo.find(params[:id])
+    photo.comments.create(comment: params[:comment])
+    redirect_to photo
+  end
+
   def new
     @photo = Photo.new
   end

@@ -35,6 +35,17 @@
   </li>
 </ul> 
 
+<ul>
+  <% @photo.comments.each do |comment| %>
+    <li><%= comment.comment %></li>
+  <% end %>
+</ul>
+
+<%= form_tag comment_photo_path(@photo) do  %>
+<%= text_area_tag :comment %>
+<%= submit_tag %>
+<% end %>
+
 
 
 
