@@ -26,10 +26,10 @@ A user is able to:
 
 
 ##Gems used
-* Devise
-* CarrierWave
-* ImageMagick
-* Acts As Votable
+* Devise - 3.5.2
+* CarrierWave - 0.10.0
+* RMagick - 2.15.4
+* Acts As Votable - 0.10.0
 
 
 ##Wins
