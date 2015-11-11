@@ -35,6 +35,7 @@
   </li>
 </ul> 
 
+<div class="commentables">
 <ul>
   <% @photo.comments.each do |comment| %>
     <li><%= comment.comment %></li>
@@ -43,8 +44,9 @@
 
 <%= form_tag comment_photo_path(@photo) do  %>
 <%= text_area_tag :comment %>
-<%= submit_tag %>
+<%= submit_tag "Add your comment" %>
 <% end %>
+</div>
 
 
 
