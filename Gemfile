@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'carrierwave'
-gem 'fog'
+gem 'fog', '1.29.0'
 gem 'foundation-rails'
 gem 'rmagick'
 gem 'acts_as_votable'
