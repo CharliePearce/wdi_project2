@@ -1,0 +1,53 @@
+<%= link_to 'Back', photos_path %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @photo.title %>  
+
+  <strong>Description:</strong>
+  <%= @photo.description %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @photo.location.name %>
+</p>
+
+<p>
+  <%= image_tag(@photo.image.url) if @photo.image %><br>
+</p>
+
+<% if current_user == @photo.user %> 
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Delete', @photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+<ul class="votables">
+  <li class="votables">
+    <%= link_to "Like", like_photo_path(@photo[:id]), method: :put %>
+    <%= @photo.get_likes.size %> |
+
+    <%= link_to "Dislike", dislike_photo_path(@photo[:id]), method: :put %>
+    <%= @photo.get_dislikes.size %> <br>
+
+    <%= link_to "Cancel Vote", unvote_photo_path(@photo[:id]), method: :put %>
+  </li>
+</ul> 
+
+<div class="commentables">
+<ul>
+  <% @photo.comments.each do |comment| %>
+    <li><%= comment.comment %></li>
+  <% end %>
+</ul>
+
+<%= form_tag comment_photo_path(@photo) do  %>
+<%= text_area_tag :comment %>
+<%= submit_tag "Add your comment" %>
+<% end %>
+</div>
+
+
+
+
