@@ -10,7 +10,7 @@ Street Art Snaps is a mobile-first app, designed to enable users to capture and 
 
 The project is deployed on Heroku and can be accessed at:
 
-<http://street-art-snaps.herokuapp.com/>
+<http://floating-beyond-1818.herokuapp.com/>
 
 ##User Story
 A user is able to:
@@ -46,11 +46,9 @@ Configuring routes and understanding the conflicting priorities that arose from 
 ##What I would like to do differently next time:
 I had hoped to implement more Foundation elements but unfortunately there was not sufficient time for this.
 
-I would also like to include the Acts As Commentable With Threading gem to allow users to leave comments on each other's photos.
-
-I would also like to install a gem such as CanCan so there is administrative functions, this would mean locations could be controlled by an administrator rather than need to be seeded.  It would also allow moderator control of comments.
+I would also like to install a gem such as CanCan so there is administrative functions, which would mean locations could be controlled by an administrator rather than need to be seeded.  It would also allow moderator control of comments.
 	
-I had also hoped to implement some kind of image gallery  to display the images in a more modern fashion than simply using a grid layout.
+I would like to implement some kind of image gallery to display the images in a more modern fashion than simply using a grid layout.
 
 The media query responsivity is not at a level which I had hoped for, especially with regards to the background image and the forms.  
 
