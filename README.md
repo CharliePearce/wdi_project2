@@ -10,7 +10,7 @@ Street Art Snaps is a mobile-first app, designed to enable users to capture and 
 
 The project is deployed on Heroku and can be accessed at:
 
-<http://floating-beyond-1818.herokuapp.com/>
+<http://street-art-snaps.herokuapp.com/>
 
 ##User Story
 A user is able to:
