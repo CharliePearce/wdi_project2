@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Places.</h2><br>
+<%= link_to 'Add a picture', new_photo_path %>
+
+
+<ul>
+  <% @locations.each do |location| %>
+  <li><%= link_to location.name, location %></li>
+  <% if location.photos.length > 0 %>
+  <li><%= image_tag location.photos.first.image.thumb %></li>
+  <% end %>
+  <% end %>
+</ul>

@@ -1,0 +1,41 @@
+<%= link_to 'Back', users_path %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>  
+</p> 
+
+<p>
+  <strong>Avatar:</strong>
+  <%= link_to image_tag(@user.user_image.thumb.url), @user.user_image.url %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.full_name %> |
+
+  <strong>Location:</strong>
+  <%= @user.try(:location).name %>
+</p>
+
+<p>
+  <strong>About Me:</strong>
+  <%= @user.about_me %>
+</p>
+
+<p>
+  <strong>Photos:</strong>
+  <ul class="user_photos_grid">
+   <% @user.photos.each do |photo| %>
+   <li class="user_photo large-3 medium-4 small-6 columns">
+     <ul class="tile">
+      <%= link_to image_tag(photo.image.thumb.url), photo %>
+    </ul>
+  </li>
+</p>
+<% end %>
+</ul>
+
+
+

@@ -1,0 +1,87 @@
+h1 {
+  font-family: 'Monofett', cursive;
+  margin: 0 auto 0 auto;
+  font-size: 60px;
+  color: white;
+}
+
+h2 {
+  font-family: 'Monofett';
+  margin: 0 auto 0 auto;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: #3BF664;
+}
+
+em {
+  color: #FED543;
+}
+
+#about {
+  text-align: center;
+}
+
+#user_photos_grid {
+  list-style: none;
+}
+
+#edit_user, #photoform, #newpassword {
+  max-width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newuser, .login, {
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.field {
+  padding: 1px;
+  border: 2px solid #206CEF;
+  margin: 2px;
+  border-radius: 5px;
+  color: #333;
+  transition: all 0.3s ease-out;
+}
+
+.commentables {
+  margin-left: auto;
+  margin-right: auto; 
+  max-width: 35%;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  text-align: center;
+  background: image-url('graf3.jpg') no-repeat center center fixed;  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Muli', sans-serif; 
+  color: white;
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    text-align: center;
+    background: image-url('graf3a.jpg') no-repeat center center fixed;
+
+  }
+
+  input[type="submit"] {
+    background: #e2e2e2;
+  }
+}
+

@@ -1,0 +1,13 @@
+one:
+  username: MyString
+  first_name: MyString
+  last_name: MyString
+  location: MyString
+  user_image: MyString
+
+two:
+  username: MyString
+  first_name: MyString
+  last_name: MyString
+  location: MyString
+  user_image: MyString
