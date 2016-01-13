@@ -29,7 +29,7 @@
   </div>
 
   <div class="field">
-    <%= f.collection_select(:location_id, Location.all, :id, :name) %>
+    <%= f.collection_select :location_id, Location.all, :id, :name, {:prompt => "Where do you live?"}, {:style => "display:block"} %>
   </div>
 
   <div class="field">
