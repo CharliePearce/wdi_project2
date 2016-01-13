@@ -22,7 +22,7 @@
     <%= f.text_field :description, :placeholder => "Description"  %>
   </div>
   <div class="field">
-    <%= f.collection_select(:location_id, Location.all, :id, :name) %>
+    <%= f.collection_select :location_id, Location.all, :id, :name, {:prompt => "Where is this?"}, {:style => "display:block"} %>
   </div>
   <div class="actions">
     <%= f.submit %>
